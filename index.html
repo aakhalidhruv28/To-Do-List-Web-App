@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Pro - A Modern Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
 
+    <div class="app-layout">
+        <!-- SIDEBAR FOR PROJECTS -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h2>Projects</h2>
+                <button id="add-project-btn" class="add-project-btn" aria-label="Add new project">+</button>
+            </header>
+            <nav>
+                <ul id="project-list" class="project-list">
+                    <!-- Projects will be dynamically inserted here -->
+                </ul>
+            </nav>
+            <footer class="sidebar-footer">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+                    <span class="theme-icon sun">☀️</span>
+                    <span class="theme-icon moon">🌙</span>
+                </button>
+                 <button id="command-palette-toggle" aria-label="Open command palette">
+                    Cmd + K
+                 </button>
+            </footer>
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 id="current-project-title">Inbox</h1>
+                <div class="header-actions">
+                    <button id="delete-project-btn" class="delete-project-btn" aria-label="Delete current project">Delete Project</button>
+                </div>
+            </header>
+            
+            <section class="stats-container" aria-label="Task statistics">
+                <div><span id="total-tasks">0</span> Total</div>
+                <div><span id="active-tasks">0</span> Active</div>
+                <div><span id="completed-tasks">0</span> Completed</div>
+                <div><span id="overdue-tasks">0</span> Overdue</div>
+            </section>
+            
+            <section class="controls">
+                <div class="add-task-container">
+                    <input type="text" id="new-task-input" placeholder="Add a new task and press Enter..." aria-label="New task input">
+                    <input type="date" id="new-task-date" aria-label="Due date">
+                    <select id="new-task-priority" aria-label="Priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+            </section>
+            
+            <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+        </main>
+    </div>
+
+    <!-- MODALS & OVERLAYS -->
+    
+    <!-- Command Palette Modal -->
+    <div id="command-palette-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content command-palette">
+            <input type="text" id="command-input" placeholder="Type a command or search for a task...">
+            <ul id="command-results"></ul>
+        </div>
+    </div>
+    
+    <!-- Focus Timer Modal -->
+    <div id="focus-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content focus-timer">
+            <h3>Focus Mode</h3>
+            <p id="focus-task-name"></p>
+            <div id="focus-time-display">25:00</div>
+            <div class="focus-controls">
+                <button id="stop-focus-btn">Stop & Mark Complete</button>
+                <button id="cancel-focus-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content confirm-dialog">
+            <h3 id="confirm-title">Are you sure?</h3>
+            <p id="confirm-message"></p>
+            <div class="confirm-buttons">
+                <button id="confirm-yes-btn">Yes</button>
+                <button id="confirm-no-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
