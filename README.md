@@ -1,6 +1,6 @@
 # Todo Web App: A Modern Task & Project Manager
 
-![Live Demo](https://img.shields.io/badge/Live_Demo-View_Here-brightgreen?style=for-the-badge&logo=github)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Here-blue?style=for-the-badge&logo=github)](https://aakhalidhruv28.github.io/To-Do-List-Web-App/)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
 
 A feature-rich, modern to-do list and project management web application built with pure HTML, CSS, and JavaScript. This app goes beyond a simple checklist, offering a suite of productivity tools designed for a seamless and intuitive user experience.
