@@ -1,4 +1,4 @@
-# Todo Web App: A Modern Task & Project Manager
+# Todo Web App | A Modern Task & Project Manager
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View_Here-blue?style=for-the-badge&logo=github)](https://aakhalidhruv28.github.io/To-Do-List-Web-App/)
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
